@@ -44,6 +44,7 @@ public class DeliveryRepositoryAdapter implements DeliveryRepository {
 
     @Override
     public void deleteByDeliveryNumber(DeliveryNumber deliveryNumber) {
-        deliveryJpaRepository.deleteByDeliveryNumber(deliveryNumber.value());
+        String number = deliveryNumber.value();
+        deliveryJpaRepository.deleteByDeliveryNumber(number);
     }
 } 

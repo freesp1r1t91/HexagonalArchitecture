@@ -8,6 +8,7 @@ import com.example.hexagonalorders.domain.port.out.DeliveryNumberGenerator;
 import com.example.hexagonalorders.domain.service.DeliveryValidationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -30,6 +31,7 @@ public class DeliveryService implements DeliveryUseCase {
     private final ApplicationEventPublisher eventPublisher;
 
     @Override
+    @Transactional
     public Delivery createDelivery(Delivery delivery) {
         deliveryValidationService.validate(delivery);
         
@@ -60,6 +62,7 @@ public class DeliveryService implements DeliveryUseCase {
     }
 
     @Override
+    @Transactional
     public void deleteDelivery(DeliveryNumber deliveryNumber) {
         deliveryRepository.deleteByDeliveryNumber(deliveryNumber);
     }

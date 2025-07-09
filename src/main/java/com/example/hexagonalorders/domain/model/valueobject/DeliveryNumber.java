@@ -6,9 +6,7 @@ package com.example.hexagonalorders.domain.model.valueobject;
  */
 public record DeliveryNumber(String value) {
     public DeliveryNumber {
-        if (value == null || value.trim().isEmpty()) {
-            throw new IllegalArgumentException("Order number cannot be null or empty");
-        }
+
     }
 
     @Override

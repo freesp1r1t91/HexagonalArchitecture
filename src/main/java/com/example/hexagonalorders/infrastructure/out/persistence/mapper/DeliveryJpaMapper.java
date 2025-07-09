@@ -31,6 +31,7 @@ public class DeliveryJpaMapper {
         if (entity == null) return null;
 
         return new Delivery(
+            
             new DeliveryNumber(entity.getDeliveryNumber()),
             new DeliveryAddress(
                 entity.getCalle(),
