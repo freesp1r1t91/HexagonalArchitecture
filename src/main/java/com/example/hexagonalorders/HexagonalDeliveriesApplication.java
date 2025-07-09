@@ -16,8 +16,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * - Infrastructure layer containing adapters and external services
  */
 @SpringBootApplication
-public class HexagonalOrdersApplication {
+public class HexagonalDeliveriesApplication {
     public static void main(String[] args) {
-        SpringApplication.run(HexagonalOrdersApplication.class, args);
+        SpringApplication.run(HexagonalDeliveriesApplication.class, args);
     }
 } 
